@@ -1,1 +1,1 @@
-# ms-s6-bmstu
+# mathstat-s6-bmstu

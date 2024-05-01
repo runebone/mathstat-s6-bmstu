@@ -51,10 +51,10 @@ end
 using GLMakie
 
 fig = Figure()
-# ax1 = Axis(fig[1, 1])
-ax2 = Axis(fig[1, 1])
+ax1 = Axis(fig[1, 1])
+ax2 = Axis(fig[1, 2])
 
-# hist!(ax1, x, m, strokewidth = 1, strokecolor = :black, normalization = :pdf),
+hist!(ax1, x, m, strokewidth = 1, strokecolor = :black, normalization = :pdf),
 ecdfplot!(ax2, x)
 
 using Distributions
@@ -65,7 +65,7 @@ ndpdf(x) = pdf(nd, x)
 ndcdf(x) = cdf(nd, x)
 
 xrange = Mmin:0.1:Mmax
-# lines!(ax1, xrange, ndpdf.(xrange), color = :red)
+lines!(ax1, xrange, ndpdf.(xrange), color = :red)
 lines!(ax2, xrange, ndcdf.(xrange), color = :red)
 
 # --- Lab. 2
